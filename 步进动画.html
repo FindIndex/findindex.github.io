@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div class="box">
+      <div class="small"></div>
+    </div>
+    <style>
+      .box {
+        width: 500px;
+        height: 200px;
+        background-color: lightblue;
+      }
+      .small {
+        width: 100px;
+        height: 100px;
+        background-color: lightcoral;
+
+        animation: mymove 3s;
+        animation-iteration-count: infinite;
+        animation-fill-mode: forwards;
+        /* animation-timing-function: steps(2, start); */
+        animation-timing-function: steps(5, start);
+      }
+
+      @keyframes mymove {
+        from {
+          transform: translateX(0);
+        }
+        to {
+          transform: translateX(400px);
+        }
+      }
+    </style>
+
+    <hr />
+
+    <div class="card"></div>
+
+    <style>
+      .card {
+        width: 132px;
+        height: 271px;
+        background-color: lightblue;
+
+        background-image: url("./mi.jpg");
+
+        /* background-position-x: 0px; */
+
+        /* animation: mi 5s linear; */
+        animation: mi 1s steps(4) infinite;
+      }
+
+      @keyframes mi {
+        from {
+          background-position-x: 0px;
+        }
+        to {
+          /* background-position-x: calc(-528px + 132px); */
+          background-position-x: -528px;
+        }
+      }
+    </style>
+  </body>
+</html>
